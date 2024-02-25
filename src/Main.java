@@ -14,18 +14,22 @@ public class Main {
                 (2028, 5, 12), new Owner());
         Eagle eagle1 = new Eagle("Орёл", 21, LocalDate.of
                 (2009, 5, 20), new Owner());
+        Fish fish1 = new Fish("бульбул", 4, LocalDate.of
+                (2023, 7,22), new Owner());
         System.out.println(liova);
         System.out.println(liova2);
         System.out.println(cat1);
         System.out.println(eagle1);
+        System.out.println(fish1);
 
         List<Animal> animals = new ArrayList<>();
         animals.add(liova);
         animals.add(liova2);
         animals.add(cat1);
         animals.add(eagle1);
+        animals.add(fish1);
         cat1.CatLifeCycle();
         eagle1.EagleLifeCycle();
-        System.out.println(eagle1.getType());
+        fish1.FishLifeCycle();
     }
 }

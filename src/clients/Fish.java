@@ -7,6 +7,8 @@ public class Fish extends Animal{
         super(name, weight, age, owner);
     }
     public void FishLifeCycle(){
+        swim();
+        swim("ocean");
     }
     private void swim(){
         System.out.println(getType() + " swims");
