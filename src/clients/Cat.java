@@ -8,14 +8,17 @@ public class Cat extends Animal{
     }
     public void CatLifeCycle(){
         meow();
-        run();
+        toGo();
         meow();
     }
     private void meow(){
         System.out.println(getType() + " Meow");
     }
-    private void run(){
-        System.out.println(getType() + " runs");
+    private void toGo(){
+        System.out.println(getType() + " is going");
+    }
+    private void toGo(String destination){
+        System.out.println(getType() + " is going " + destination);
     }
     private void swim(){
         System.out.println(getType() + " swims");
