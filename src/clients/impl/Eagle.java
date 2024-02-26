@@ -1,14 +1,23 @@
-package clients;
+package clients.impl;
+
+import clients.Animal;
+import clients.Flyable;
+import clients.Owner;
 
 import java.time.LocalDate;
 
-public class Eagle extends Animal{
+public class Eagle extends Animal implements Flyable {
     public Eagle(String name, float weight, LocalDate age, Owner owner) {
         super(name, weight, age, owner);
     }
+
+    @Override
+    public void eat() {
+        System.out.println("Eagle eats");
+    }
+
     public void EagleLifeCycle(){
         cleanFeathers();
-        fly();
         fly("mounts", "hunt");
         hunt();
     }
@@ -26,5 +35,10 @@ public class Eagle extends Animal{
     }
     protected void swim(){
         System.out.println("Eagle cannot swim");
+    }
+
+    @Override
+    public double fly() {
+        return 7;
     }
 }

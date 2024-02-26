@@ -2,7 +2,7 @@ package clients;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected float weight;
     protected LocalDate age;
@@ -14,33 +14,7 @@ public class Animal {
         this.age = age;
         this.owner = owner;
     }
-
-    public void lifeCycle(){
-        wakeup(15.35);
-        eat();
-        sleep();
-    }
-    private void sleep(){
-        System.out.println(getType() + " is sleeping");
-    }
-    private void wakeup(){
-        System.out.println(getType() + " waked up");
-    }
-    private void wakeup(double time){
-        System.out.println(getType() + " waked up at " + time);
-    }
-    private void eat(){
-        System.out.println(getType() + " is eating");
-    }
-    protected void toGo(){
-        System.out.println(getType() + " to go");
-    }
-    protected void swim(){
-        System.out.println(getType() + " swims");
-    }
-    protected void fly(){
-        System.out.println(getType() + " flies");
-    }
+    public abstract void eat();
     public String getType(){
 
         return getClass().getSimpleName();

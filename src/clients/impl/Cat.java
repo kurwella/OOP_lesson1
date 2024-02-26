@@ -1,14 +1,22 @@
-package clients;
+package clients.impl;
+
+import clients.Animal;
+import clients.Owner;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal{
+public class Cat extends Animal {
     public Cat(String name, float weight, LocalDate age, Owner owner) {
         super(name, weight, age, owner);
     }
+
+    @Override
+    public void eat() {
+        System.out.println("Cat eats");
+    }
+
     public void CatLifeCycle(){
         meow();
-        toGo();
         meow();
         swim();
     }
@@ -20,8 +28,5 @@ public class Cat extends Animal{
     }
     protected void swim(){
         System.out.println("Cat cannot swim.");
-    }
-    protected void fly(){
-        System.out.println("Cat cannot fly.");
     }
 }
