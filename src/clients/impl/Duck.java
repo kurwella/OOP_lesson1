@@ -5,6 +5,7 @@ import clients.Flyable;
 import clients.Owner;
 import clients.Swimmable;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Duck extends Animal implements Flyable, Swimmable {
