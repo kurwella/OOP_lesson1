@@ -8,14 +8,12 @@ public class Eagle extends Animal{
     }
     public void EagleLifeCycle(){
         cleanFeathers();
+        fly();
         fly("mounts", "hunt");
         hunt();
     }
     private void cleanFeathers(){
         System.out.println(getType() + " cleans feathers");
-    }
-    private void fly(){
-        System.out.println(getType() + " flies");
     }
     private void fly(String place){
         System.out.println(getType() + " is flying to " + place);
@@ -25,5 +23,8 @@ public class Eagle extends Animal{
     }
     private void hunt(){
         System.out.println(getType() + " is hunting");
+    }
+    protected void swim(){
+        System.out.println("Eagle cannot swim");
     }
 }

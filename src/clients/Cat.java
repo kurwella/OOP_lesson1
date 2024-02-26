@@ -10,17 +10,18 @@ public class Cat extends Animal{
         meow();
         toGo();
         meow();
+        swim();
     }
     private void meow(){
         System.out.println(getType() + " Meow");
     }
-    private void toGo(){
-        System.out.println(getType() + " is going");
-    }
-    private void toGo(String destination){
+    protected void toGo(String destination){
         System.out.println(getType() + " is going " + destination);
     }
-    private void swim(){
-        System.out.println(getType() + " swims");
+    protected void swim(){
+        System.out.println("Cat cannot swim.");
+    }
+    protected void fly(){
+        System.out.println("Cat cannot fly.");
     }
 }

@@ -16,6 +16,10 @@ public class Main {
                 (2009, 5, 20), new Owner());
         Fish fish1 = new Fish("бульбул", 4, LocalDate.of
                 (2023, 7,22), new Owner());
+        Human human1 = new Human("Андрей", 69, LocalDate.of
+                (1978, 10,30), new Owner());
+        WaterSnake snake1 = new WaterSnake("ssss", 5, LocalDate.of
+                (2022, 2, 2), new Owner());
         System.out.println(liova);
         System.out.println(liova2);
         System.out.println(cat1);
@@ -31,5 +35,6 @@ public class Main {
         cat1.CatLifeCycle();
         eagle1.EagleLifeCycle();
         fish1.FishLifeCycle();
+        snake1.SnakeLifeCycle();
     }
 }

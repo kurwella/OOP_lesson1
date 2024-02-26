@@ -18,7 +18,6 @@ public class Animal {
     public void lifeCycle(){
         wakeup(15.35);
         eat();
-        play();
         sleep();
     }
     private void sleep(){
@@ -33,8 +32,14 @@ public class Animal {
     private void eat(){
         System.out.println(getType() + " is eating");
     }
-    private void play(){
-        System.out.println(getType() + " is playing");
+    protected void toGo(){
+        System.out.println(getType() + " to go");
+    }
+    protected void swim(){
+        System.out.println(getType() + " swims");
+    }
+    protected void fly(){
+        System.out.println(getType() + " flies");
     }
     public String getType(){
 

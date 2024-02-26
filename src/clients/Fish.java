@@ -10,10 +10,13 @@ public class Fish extends Animal{
         swim();
         swim("ocean");
     }
-    private void swim(){
+    protected void swim(){
         System.out.println(getType() + " swims");
     }
-    private void swim(String destination){
+    protected void swim(String destination){
         System.out.println(getType() + " is swimming to " + destination);
+    }
+    protected void fly(){
+        System.out.println("Fish cannot fly");
     }
 }
