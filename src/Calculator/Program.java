@@ -10,7 +10,6 @@ public class Program {
         foo foo = new foo() {
             @Override
             public double plus(int a, int b) {
-                Math.
                 return 0;
             }
 
@@ -18,7 +17,7 @@ public class Program {
             public double minus(int a, int b) {
                 return 0;
             }
-        }
+        };
     }
 }
 

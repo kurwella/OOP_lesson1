@@ -21,7 +21,7 @@ public class Fish extends Animal implements Swimmable {
     }
 
     @Override
-    public void swim() {
-
+    public double swim() {
+        return 20;
     }
 }
