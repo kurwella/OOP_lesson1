@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-public class Medicine2 implements Iterable<MedComponent>, Comparable<MedComponent> {
+public class Medicine2 implements Iterable<MedComponent>, Comparable<Medicine2> {
     public List<MedComponent> components;
     public int index;
     private final String name;
@@ -36,7 +36,7 @@ public class Medicine2 implements Iterable<MedComponent>, Comparable<MedComponen
 //    }
     @Override
     public String toString(){
-        return "Medicine: " + name + components.toString() + "\n";
+        return "Medicine: " + name + "\n";
     }
 
     @Override
@@ -54,8 +54,13 @@ public class Medicine2 implements Iterable<MedComponent>, Comparable<MedComponen
         };
     }
 
+//    @Override
+//    public int compareTo(MedComponent o) {
+//        return name.length() - o.getName().length();
+//    }
+
     @Override
-    public int compareTo(MedComponent o) {
-        return name.length() - o.getName().length();
+    public int compareTo(Medicine2 o) {
+        return name.length() - o.name.length();
     }
 }
