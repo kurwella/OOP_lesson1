@@ -16,12 +16,13 @@ public class Cat extends Animal implements Goable {
         System.out.println("Cat eats");
     }
 
-    public void CatLifeCycle(){
+    public void CatLifeCycle() {
         meow();
         meow();
         run();
     }
-    private void meow(){
+
+    private void meow() {
         System.out.println(getType() + " Meow");
     }
 
