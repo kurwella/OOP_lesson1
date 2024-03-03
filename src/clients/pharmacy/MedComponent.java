@@ -32,9 +32,13 @@ public abstract class MedComponent implements Comparable<MedComponent>{
         return name;
     }
 
+    public int getPower() {
+        return power;
+    }
+
     @Override
     public String toString() {
-        return "MedComponent{" +
+        return  "\n" + "MedComponent{" +
                 "name: '" + name + '\'' +
                 ", weight: " + weight +
                 ", power: " + power +

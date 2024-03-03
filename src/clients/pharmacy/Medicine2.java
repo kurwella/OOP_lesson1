@@ -1,9 +1,6 @@
 package clients.pharmacy;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Medicine2 implements Iterable<MedComponent>, Comparable<Medicine2> {
     public List<MedComponent> components;
@@ -36,7 +33,7 @@ public class Medicine2 implements Iterable<MedComponent>, Comparable<Medicine2> 
 //    }
     @Override
     public String toString(){
-        return "Medicine: " + name + "\n";
+        return "Medicine: " + name + components + "\n";
     }
 
     @Override
@@ -61,6 +58,31 @@ public class Medicine2 implements Iterable<MedComponent>, Comparable<Medicine2> 
 
     @Override
     public int compareTo(Medicine2 o) {
-        return name.length() - o.name.length();
+//        int NameComparator = name.length() - o.name.length();
+//        if (name.length() - o.name.length() == 0){
+//            return components.size() - o.components.size();
+//        }
+//        else return NameComparator;
+        Collections.sort(this.components, new Comparator<MedComponent>() {
+            @Override
+            public int compare(MedComponent o1, MedComponent o2) {
+                return Double.compare(o1.getPower(), o2.getPower());
+            }
+        });
+        Collections.sort(o.components, new Comparator<MedComponent>() {
+            @Override
+            public int compare(MedComponent o1, MedComponent o2) {
+                return Double.compare(o1.getPower(), o2.getPower());
+            }
+        });
+        double totalPower = 0;
+        for (MedComponent component : this.components){
+            totalPower += component.getPower();
+        }
+        double ototalPower = 0;
+        for (MedComponent component : o.components){
+            ototalPower += component.getPower();
+        }
+        return Double.compare(totalPower, ototalPower);
     }
 }
